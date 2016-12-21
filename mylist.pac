@@ -28,7 +28,7 @@ function FindProxyForURL(url, host) {
         }
     }
 
-    if (shExpMatch(url, "*.kohlsimg.com/*") ) {
+    if (shExpMatch(url, "*.kohlsimg.com/*") || shExpMatch(url, "*.kohls.com/*") ) {
         return "PROXY "+proxyserver;
     }
    
