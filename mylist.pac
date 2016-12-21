@@ -8,6 +8,8 @@ function FindProxyForURL(url, host) {
         "kohls.com",
         "www.kohls.com",
         "media.kohlsimg.com",
+        "media1.kohlsimg.com",
+        "media2.kohlsimg.com",
         "www.media.kohlsimg.com",
         "target.com",
         "www.target.com",
@@ -24,6 +26,10 @@ function FindProxyForURL(url, host) {
         if (dnsDomainIs(host, value) ) {
             return "PROXY "+proxyserver;
         }
+    }
+
+    if (shExpMatch(url, "*.kohlsimg.com/*") ) {
+        return "PROXY "+proxyserver;
     }
    
     return "DIRECT";
