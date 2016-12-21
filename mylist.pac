@@ -10,6 +10,7 @@ function FindProxyForURL(url, host) {
         "media.kohlsimg.com",
         "media1.kohlsimg.com",
         "media2.kohlsimg.com",
+        "js.kohls.com",
         "www.media.kohlsimg.com",
         "target.com",
         "www.target.com",
