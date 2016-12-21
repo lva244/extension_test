@@ -7,6 +7,8 @@ function FindProxyForURL(url, host) {
     var proxylist = new Array(
         "kohls.com",
         "www.kohls.com",
+        "media.kohlsimg.com",
+        "www.media.kohlsimg.com",
         "target.com",
         "www.target.com",
         "eastbay.com",
@@ -19,7 +21,7 @@ function FindProxyForURL(url, host) {
     // Return our proxy name for matched domains/hosts
     for(var i=0; i<proxylist.length; i++) {
         var value = proxylist[i];
-        if ( localHostOrDomainIs(host, value) ) {
+        if (dnsDomainIs(host, value) ) {
             return "PROXY "+proxyserver;
         }
     }
